@@ -5,24 +5,24 @@ package com.ThreeSquadIndie.FermiumCraft.lib;
  */
 public class Reference {
     //Important information
-    public static final String MODID = "FC1";
-    public static final String VERSION = "0.01";
-    public static final String MOD_NAME = "FermiumCraft1";
+    public static final String MODID = "FC";
+    public static final String VERSION = "0.0.2";
+    public static final String MOD_NAME = "FermiumCraft";
     public static final String clientSide = "com.ThreeSquadIndie.FermiumCraft.proxy.ClientProxy";
     public static final String serverSide = "com.ThreeSquadIndie.FermiumCraft.proxy.CommonProxy";
 
     //Textures
     //Items
-    public static final String ItemFermiumCatalysisStar = "fermiumcraft1:fermiumCatalysisStar";
-    public static final String ItemFermiumStar = "fermiumcraft1:fermiumStar";
-    public static final String ItemFermiumShovel = "fermiumcraft1:fermiumShovel";
-    public static final String ItemFermiumPickaxe = "fermiumcraft1:fermiumPickaxe";
-    public static final String ItemFermiumNugget = "fermiumcraft1:fermiumNugget";
-    public static final String ItemFermiumIngot = "fermiumcraft1:fermiumIngot";
-    public static final String ItemFermiumHoe = "fermiumcraft1:fermiumHoe";
-    public static final String ItemFermiumAxe = "fermiumcraft1:fermiumAxe";
-    public static final String ItemFermiumSword = "fermiumcraft1:fermiumSword";
+    public static final String ItemFermiumCatalysisStar = "fermiumcraft:fermiumCatalysisStar";
+    public static final String ItemFermiumStar = "fermiumcraft:fermiumStar";
+    public static final String ItemFermiumShovel = "fermiumcraft:fermiumShovel";
+    public static final String ItemFermiumPickaxe = "fermiumcraft:fermiumPickaxe";
+    public static final String ItemFermiumNugget = "fermiumcraft:fermiumNugget";
+    public static final String ItemFermiumIngot = "fermiumcraft:fermiumIngot";
+    public static final String ItemFermiumHoe = "fermiumcraft:fermiumHoe";
+    public static final String ItemFermiumAxe = "fermiumcraft:fermiumAxe";
+    public static final String ItemFermiumSword = "fermiumcraft:fermiumSword";
 
     //Blocks
-    public static final String BlockFermiumOre = "fermiumcraft1:fermiumOre";
+    public static final String BlockFermiumOre = "fermiumcraft:fermiumOre";
 }
