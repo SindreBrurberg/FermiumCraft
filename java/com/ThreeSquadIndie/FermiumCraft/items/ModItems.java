@@ -13,8 +13,10 @@ public class ModItems {
     public static Item itemFermiumNugget;
     public static Item itemFermiumPickaxe;
     public static Item itemFermiumShovel;
-    public static Item itemFermiumStar;
-    public static Item itemFermiumCatalysisStar;
+    public static Item itemFermiumStar_Hard;
+    public static Item itemFermiumCatalysisStar_Hard;
+    public static Item itemFermiumStar_Soft;
+    public static Item itemFermiumCatalysisStar_Soft;
     public static Item itemFermiumSword;
 
     public static void init() {
@@ -24,8 +26,10 @@ public class ModItems {
         itemFermiumNugget = new ItemFermiumNugget();
         itemFermiumPickaxe = new ItemFermiumPickaxe(Materials.fermiuamMaterial);
         itemFermiumShovel = new ItemFermiumShovel(Materials.fermiuamMaterial);
-        itemFermiumStar = new ItemFermiumStar();
-        itemFermiumCatalysisStar = new ItemFermiumCatalysisStar(Materials.fermiuamMaterial);
+        itemFermiumStar_Hard = new ItemFermiumStar_Hard();
+        itemFermiumCatalysisStar_Hard = new ItemFermiumCatalysisStar_Hard(Materials.fermiuamMaterial);
+        itemFermiumStar_Soft = new ItemFermiumStar_Soft();
+        itemFermiumCatalysisStar_Soft = new ItemFermiumCatalysisStar_Soft();
         itemFermiumSword = new ItemFermiumSword(Materials.fermiuamMaterial);
     }
 }

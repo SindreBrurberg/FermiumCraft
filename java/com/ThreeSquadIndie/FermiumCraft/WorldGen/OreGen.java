@@ -1,14 +1,12 @@
 package com.ThreeSquadIndie.FermiumCraft.WorldGen;
 
-import java.util.Random;
-
+import com.ThreeSquadIndie.FermiumCraft.blocks.ModBlocks;
+import cpw.mods.fml.common.IWorldGenerator;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 
-import com.ThreeSquadIndie.FermiumCraft.blocks.ModBlocks;
-
-import cpw.mods.fml.common.IWorldGenerator;
+import java.util.Random;
 
 public class OreGen implements IWorldGenerator {
 	@Override
@@ -34,7 +32,7 @@ public class OreGen implements IWorldGenerator {
 	private void generateSurface(World world, Random rand, int chunkX, int chunkZ) {
 		for(int k = 0; k < 10; k++) {
 			int fermiumOreXCoord = chunkX + rand.nextInt(16);
-        	int fermiumOreYCoord = rand.nextInt(64);
+        	int fermiumOreYCoord = rand.nextInt(12);
         	int fermiumOreZCoord = chunkZ + rand.nextInt(16);
         	
         	(new WorldGenMinable(ModBlocks.blockFermiumOre, 13)).generate(world, rand, fermiumOreXCoord, fermiumOreYCoord, fermiumOreZCoord);

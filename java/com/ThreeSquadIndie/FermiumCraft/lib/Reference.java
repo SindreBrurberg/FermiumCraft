@@ -13,8 +13,10 @@ public class Reference {
 
     //Textures
     //Items
-    public static final String ItemFermiumCatalysisStar = "fermiumcraft:fermiumCatalysisStar";
-    public static final String ItemFermiumStar = "fermiumcraft:fermiumStar";
+    public static final String ItemFermiumCatalysisStar_Hard = "fermiumcraft:fermiumCatalysisStar_Hard";
+    public static final String ItemFermiumStar_Hard = "fermiumcraft:fermiumStar_Hard";
+    public static final String ItemFermiumCatalysisStar_Soft = "fermiumcraft:fermiumCatalysisStar_Soft";
+    public static final String ItemFermiumStar_Soft = "fermiumcraft:fermiumStar_Soft";
     public static final String ItemFermiumShovel = "fermiumcraft:fermiumShovel";
     public static final String ItemFermiumPickaxe = "fermiumcraft:fermiumPickaxe";
     public static final String ItemFermiumNugget = "fermiumcraft:fermiumNugget";
