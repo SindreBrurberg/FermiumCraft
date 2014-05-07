@@ -1,14 +1,14 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "modid": "fermiumcraft",
+  "name": "Fermium Craft",
+  "description": "Fermium and all its awsomnes",
   "version": "${version}",
   "mcversion": "${mcversion}",
-  "url": "",
+  "url": "3sqadindie.com",
   "updateUrl": "",
-  "authors": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authors": ["Dethsanius"],
+  "credits": "The Forge and FML guys, for making the Forge api and the MCP guys for making the MCP.",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
