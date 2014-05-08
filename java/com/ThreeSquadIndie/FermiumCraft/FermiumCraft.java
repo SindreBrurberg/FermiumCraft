@@ -6,7 +6,6 @@ import com.ThreeSquadIndie.FermiumCraft.items.ModItems;
 import com.ThreeSquadIndie.FermiumCraft.lib.Reference;
 import com.ThreeSquadIndie.FermiumCraft.lib.Registry;
 import com.ThreeSquadIndie.FermiumCraft.proxy.CommonProxy;
-
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -14,7 +13,6 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
@@ -32,9 +30,7 @@ public class FermiumCraft {
 
     public static CreativeTabs tabFermium = new CreativeTabs("tabFermium") {
 
-        public ItemStack getIconItemStack() {
-            return new ItemStack(ModItems.itemFermiumIngot, 1, 0);
-        }
+        public ItemStack getIconItemStack() { return new ItemStack(ModItems.itemFermiumIngot, 1, 0); }
 
         @Override
         public Item getTabIconItem() {

@@ -28,7 +28,7 @@ public class ModItems {
         itemFermiumShovel = new ItemFermiumShovel(Materials.fermiuamMaterial);
         itemFermiumStar_Hard = new ItemFermiumStar_Hard();
         itemFermiumCatalysisStar_Hard = new ItemFermiumCatalysisStar_Hard(Materials.fermiuamMaterial);
-        itemFermiumStar_Soft = new ItemFermiumStar_Soft();
+        itemFermiumStar_Soft = new ItemFermiumStar_Soft(20, 2.0F, true);
         itemFermiumCatalysisStar_Soft = new ItemFermiumCatalysisStar_Soft();
         itemFermiumSword = new ItemFermiumSword(Materials.fermiuamMaterial);
     }

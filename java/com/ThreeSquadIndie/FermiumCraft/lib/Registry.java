@@ -3,6 +3,7 @@ package com.ThreeSquadIndie.FermiumCraft.lib;
 import com.ThreeSquadIndie.FermiumCraft.blocks.ModBlocks;
 import com.ThreeSquadIndie.FermiumCraft.items.ModItems;
 import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 
@@ -37,7 +38,7 @@ public class Registry {
         GameRegistry.addRecipe(new ItemStack(ModItems.itemFermiumShovel), " X ", " Y ", " Y ", 'X', new ItemStack(ModItems.itemFermiumIngot), 'Y', new ItemStack(Items.stick));
         GameRegistry.addRecipe(new ItemStack(ModItems.itemFermiumSword), " X ", " X ", " Y ", 'X', new ItemStack(ModItems.itemFermiumIngot), 'Y', new ItemStack(Items.stick));
         GameRegistry.addRecipe(new ItemStack(ModItems.itemFermiumAxe), "XX ", "XY ", " Y ", 'X', new ItemStack(ModItems.itemFermiumIngot), 'Y', new ItemStack(Items.stick));
-        GameRegistry.addRecipe(new ItemStack(ModItems.itemFermiumStar_Soft), "YXY", "XZX", "YXY", 'X', new ItemStack(Items.slime_ball), 'Y', new ItemStack(ModItems.itemFermiumNugget), 'Z', new ItemStack(ModItems.itemFermiumIngot));
+        GameRegistry.addRecipe(new ItemStack(ModItems.itemFermiumStar_Soft), "AXB", "ZYZ", "CXD", 'X', new ItemStack(Items.slime_ball), 'Y', new ItemStack(Blocks.end_stone), 'Z', new ItemStack(ModItems.itemFermiumIngot), 'A', new ItemStack(Items.ender_pearl), 'B', new ItemStack(Items.diamond), 'C', new ItemStack(Items.golden_apple), 'D', new ItemStack(Items.ender_eye));
         GameRegistry.addRecipe(new ItemStack(ModItems.itemFermiumCatalysisStar_Soft), "YXY", "XZX", "YXY", 'X', new ItemStack(ModItems.itemFermiumStar_Soft), 'Y', new ItemStack(Items.slime_ball), 'Z', new ItemStack(ModItems.itemFermiumIngot));
 
         //Shapeless
