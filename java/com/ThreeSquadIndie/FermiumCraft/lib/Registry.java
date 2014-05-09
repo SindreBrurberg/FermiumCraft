@@ -1,7 +1,9 @@
 package com.ThreeSquadIndie.FermiumCraft.lib;
 
+import com.ThreeSquadIndie.FermiumCraft.Entity.EntityFermiumStar;
 import com.ThreeSquadIndie.FermiumCraft.blocks.ModBlocks;
 import com.ThreeSquadIndie.FermiumCraft.items.ModItems;
+import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -25,9 +27,10 @@ public class Registry {
         GameRegistry.registerItem(ModItems.itemFermiumCatalysisStar_Hard, "Hard Fermium Catalysis Star", Reference.MODID);
         GameRegistry.registerItem(ModItems.itemFermiumStar_Soft, "Soft Fermium Star", Reference.MODID);
         GameRegistry.registerItem(ModItems.itemFermiumCatalysisStar_Soft, "Soft Fermium Catalysis Star", Reference.MODID);
-
         //Blocks
         GameRegistry.registerBlock(ModBlocks.blockFermiumOre, "fermiumOre");
+        //Entity
+        EntityRegistry.registerModEntity(EntityFermiumStar.class, "FermiumStarHard", 10, Reference.MODID, 120, 3, true);
     }
 
     public static void recepieInit(){
