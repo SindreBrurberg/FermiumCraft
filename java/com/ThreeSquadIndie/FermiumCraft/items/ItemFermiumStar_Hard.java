@@ -13,7 +13,7 @@ import net.minecraft.world.World;
  */
 public class ItemFermiumStar_Hard extends Item {
     public ItemFermiumStar_Hard() {
-        maxStackSize = 1;
+        maxStackSize = 16;
         setCreativeTab(FermiumCraft.tabFermium);
         setUnlocalizedName("fermiumStar_Hard");
         setTextureName(Reference.ItemFermiumStar_Hard);

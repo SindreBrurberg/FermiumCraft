@@ -26,22 +26,21 @@ public class OreGen implements IWorldGenerator {
 
 	private void generateEnd(World world, Random rand, int chunkX, int chunkZ) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	private void generateSurface(World world, Random rand, int chunkX, int chunkZ) {
-		for(int k = 0; k < 10; k++) {
-			int fermiumOreXCoord = chunkX + rand.nextInt(16);
-        	int fermiumOreYCoord = rand.nextInt(12);
-        	int fermiumOreZCoord = chunkZ + rand.nextInt(16);
-        	
-        	(new WorldGenMinable(ModBlocks.blockFermiumOre, 13)).generate(world, rand, fermiumOreXCoord, fermiumOreYCoord, fermiumOreZCoord);
-		}
+        for(int k = 0; k < 10; k++) {
+            int fermiumOreXCoord = chunkX + rand.nextInt(16);
+            int fermiumOreYCoord = rand.nextInt(12);
+            int fermiumOreZCoord = chunkZ + rand.nextInt(16);
+
+            (new WorldGenMinable(ModBlocks.blockFermiumOre, 13)).generate(world, rand, fermiumOreXCoord, fermiumOreYCoord, fermiumOreZCoord);
+        }
 	}
 
 	private void generateNether(World world, Random rand, int chunkX, int chunkZ) {
-		// TODO Auto-generated method stub
-		
+
 	}
 
 }

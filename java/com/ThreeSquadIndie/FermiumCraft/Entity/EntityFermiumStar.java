@@ -42,13 +42,20 @@ public class EntityFermiumStar extends EntityThrowable {
 
             par1MovingObjectPosition.entityHit.attackEntityFrom(DamageSource.causeThrownDamage(this, this.getThrower()), (float)b0);
         }
+        int num = 0;
 
-        for (int i = 0; i < 20; ++i)
-        {
-        }
 
         if (!this.worldObj.isRemote)
         {
+            for (int i = 0; i < 100; ++i)
+            {
+                if (num == 5){
+                    this.worldObj.createExplosion(this, this.posX, this.posY, this.posZ, (float)5, true);
+                    num = 0;
+                }
+                num++;
+            }
+            this.isDead = true;
         }
     }
 }

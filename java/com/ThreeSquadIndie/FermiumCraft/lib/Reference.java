@@ -27,4 +27,7 @@ public class Reference {
 
     //Blocks
     public static final String BlockFermiumOre = "fermiumcraft:fermiumOre";
+
+    //Entity
+
 }
