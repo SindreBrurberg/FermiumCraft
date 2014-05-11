@@ -43,8 +43,6 @@ public class EntityFermiumStar extends EntityThrowable {
             par1MovingObjectPosition.entityHit.attackEntityFrom(DamageSource.causeThrownDamage(this, this.getThrower()), (float)b0);
         }
         int num = 0;
-
-
         if (!this.worldObj.isRemote)
         {
             for (int i = 0; i < 100; ++i)
@@ -52,6 +50,10 @@ public class EntityFermiumStar extends EntityThrowable {
                 if (num == 5){
                     this.worldObj.createExplosion(this, this.posX, this.posY, this.posZ, (float)5, true);
                     num = 0;
+                }
+                if (i == 99){
+
+                    this.worldObj.newExplosion(this, this.posX, this.posY, this.posZ, (float)5, true, true);
                 }
                 num++;
             }
