@@ -40,7 +40,7 @@ public class FermiumCraft {
     public void preInit(FMLPreInitializationEvent event) {
         ModItems.init();
         ModBlocks.init();
-        Registry.gameInit();
+        Registry.gamePreInit();
     }
 
     @Mod.EventHandler
@@ -51,6 +51,6 @@ public class FermiumCraft {
 
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event) {
-        // Stub Method
+        Registry.guiPostInit();
     }
 }

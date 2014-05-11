@@ -31,6 +31,9 @@ public class Reference {
     public static final String BlockFermiumBlock = MOD_NAME + ":fermiumBlock";
     public static final String BlockFabricator = Reference.MOD_NAME + ":textures/blocks/fabricatorBlock.png";
 
+    //GUI
+    public static final String InventoryGui = "/gui/inventory.png";
+
     //Entity
 
 }

@@ -48,7 +48,7 @@ public class EntityFermiumStar extends EntityThrowable {
             for (int i = 0; i < 100; ++i)
             {
                 if (num == 5){
-                    this.worldObj.createExplosion(this, this.posX, this.posY, this.posZ, (float)5, true);
+                    this.worldObj.createExplosion(this, this.posX, this.posY - 1, this.posZ, (float)5, true);
                     num = 0;
                 }
                 if (i == 99){

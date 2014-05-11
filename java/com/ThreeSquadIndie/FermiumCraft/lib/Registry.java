@@ -1,22 +1,25 @@
 package com.ThreeSquadIndie.FermiumCraft.lib;
 
+import com.ThreeSquadIndie.FermiumCraft.blocks.ModBlocks;
 import com.ThreeSquadIndie.FermiumCraft.entity.EntityFermiumStar;
 import com.ThreeSquadIndie.FermiumCraft.entity.TileEntityFabricator;
-import com.ThreeSquadIndie.FermiumCraft.worldGen.OreGen;
-import com.ThreeSquadIndie.FermiumCraft.blocks.ModBlocks;
+import com.ThreeSquadIndie.FermiumCraft.gui.GuiBuffBar;
 import com.ThreeSquadIndie.FermiumCraft.items.ModItems;
+import com.ThreeSquadIndie.FermiumCraft.worldGen.OreGen;
 import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.client.Minecraft;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.MinecraftForge;
 
 /**
  * Created by Dethsanius on 12.03.14, project is forge package are com.ThreeSquadIndie.FermiumCraft.lib.
  */
 public class Registry {
 
-    public static void gameInit() {
+    public static void gamePreInit() {
         // Items
         GameRegistry.registerItem(ModItems.itemFermiumAxe, "Fermium Axe", Reference.MODID);
         GameRegistry.registerItem(ModItems.itemFermiumHoe, "Fermium Hoe", Reference.MODID);
@@ -38,6 +41,8 @@ public class Registry {
         GameRegistry.registerTileEntity(TileEntityFabricator.class, "tileEntityFabricator");
         //WorldGen
         GameRegistry.registerWorldGenerator(new OreGen(), 0);
+        //Event
+        MinecraftForge.EVENT_BUS.register(new Events());
     }
 
     public static void recepieInit(){
@@ -62,5 +67,9 @@ public class Registry {
         GameRegistry.addSmelting(ModBlocks.blockFermiumOre, new ItemStack(ModItems.itemFermiumIngot), 2F);
         GameRegistry.addSmelting(ModItems.itemFermiumCatalysisStar_Soft, new ItemStack(ModItems.itemFermiumCatalysisStar_Hard), 2F);
         GameRegistry.addSmelting(ModItems.itemFermiumStar_Soft, new ItemStack(ModItems.itemFermiumStar_Hard), 2F);
+    }
+
+    public static void guiPostInit(){
+        MinecraftForge.EVENT_BUS.register(new GuiBuffBar(Minecraft.getMinecraft()));
     }
 }
