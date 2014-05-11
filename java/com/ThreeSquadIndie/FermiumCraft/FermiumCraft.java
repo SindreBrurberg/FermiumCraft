@@ -1,6 +1,5 @@
 package com.ThreeSquadIndie.FermiumCraft;
 
-import com.ThreeSquadIndie.FermiumCraft.WorldGen.OreGen;
 import com.ThreeSquadIndie.FermiumCraft.blocks.ModBlocks;
 import com.ThreeSquadIndie.FermiumCraft.items.ModItems;
 import com.ThreeSquadIndie.FermiumCraft.lib.Reference;
@@ -11,7 +10,6 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -43,15 +41,12 @@ public class FermiumCraft {
         ModItems.init();
         ModBlocks.init();
         Registry.gameInit();
-        // Stub Method
     }
 
     @Mod.EventHandler
     public void Init(FMLInitializationEvent event) {
         proxy.registerRenderers();
         Registry.recepieInit();
-		GameRegistry.registerWorldGenerator(new OreGen(), 0);
-        // Stub Method
     }
 
     @Mod.EventHandler

@@ -1,4 +1,4 @@
-package com.ThreeSquadIndie.FermiumCraft.Entity;
+package com.ThreeSquadIndie.FermiumCraft.entity;
 
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.monster.EntityBlaze;

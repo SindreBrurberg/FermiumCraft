@@ -13,20 +13,23 @@ public class Reference {
 
     //Textures
     //Items
-    public static final String ItemFermiumCatalysisStar_Hard = "fermiumcraft:fermiumCatalysisStar_Hard";
-    public static final String ItemFermiumStar_Hard = "fermiumcraft:fermiumStar_Hard";
-    public static final String ItemFermiumCatalysisStar_Soft = "fermiumcraft:fermiumCatalysisStar_Soft";
-    public static final String ItemFermiumStar_Soft = "fermiumcraft:fermiumStar_Soft";
-    public static final String ItemFermiumShovel = "fermiumcraft:fermiumShovel";
-    public static final String ItemFermiumPickaxe = "fermiumcraft:fermiumPickaxe";
-    public static final String ItemFermiumNugget = "fermiumcraft:fermiumNugget";
-    public static final String ItemFermiumIngot = "fermiumcraft:fermiumIngot";
-    public static final String ItemFermiumHoe = "fermiumcraft:fermiumHoe";
-    public static final String ItemFermiumAxe = "fermiumcraft:fermiumAxe";
-    public static final String ItemFermiumSword = "fermiumcraft:fermiumSword";
+    public static final String ItemFermiumCatalysisStar_Hard = MOD_NAME + ":fermiumCatalysisStar_Hard";
+    public static final String ItemFermiumStar_Hard = MOD_NAME + ":fermiumStar_Hard";
+    public static final String ItemFermiumCatalysisStar_Soft = MOD_NAME + ":fermiumCatalysisStar_Soft";
+    public static final String ItemFermiumStar_Soft = MOD_NAME + ":fermiumStar_Soft";
+    public static final String ItemFermiumShovel = MOD_NAME + ":fermiumShovel";
+    public static final String ItemFermiumPickaxe = MOD_NAME + ":fermiumPickaxe";
+    public static final String ItemFermiumNugget = MOD_NAME + ":fermiumNugget";
+    public static final String ItemFermiumIngot = MOD_NAME + ":fermiumIngot";
+    public static final String ItemFermiumHoe = MOD_NAME + ":fermiumHoe";
+    public static final String ItemFermiumAxe = MOD_NAME + ":fermiumAxe";
+    public static final String ItemFermiumSword = MOD_NAME + ":fermiumSword";
+    public static final String ItemFabricator = MOD_NAME + ":fabricatorItem";
 
     //Blocks
-    public static final String BlockFermiumOre = "fermiumcraft:fermiumOre";
+    public static final String BlockFermiumOre = MOD_NAME + ":fermiumOre";
+    public static final String BlockFermiumBlock = MOD_NAME + ":fermiumBlock";
+    public static final String BlockFabricator = Reference.MOD_NAME + ":textures/blocks/fabricatorBlock.png";
 
     //Entity
 

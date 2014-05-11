@@ -1,6 +1,6 @@
 package com.ThreeSquadIndie.FermiumCraft.items;
 
-import com.ThreeSquadIndie.FermiumCraft.Entity.EntityFermiumStar;
+import com.ThreeSquadIndie.FermiumCraft.entity.EntityFermiumStar;
 import com.ThreeSquadIndie.FermiumCraft.FermiumCraft;
 import com.ThreeSquadIndie.FermiumCraft.lib.Reference;
 import net.minecraft.entity.player.EntityPlayer;

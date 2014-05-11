@@ -6,16 +6,16 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
 /**
- * Created by Dethsanius on 12.03.14, project is forge package are com.ThreeSquadIndie.FermiumCraft.blocks.
+ * Created by Dethsanius on 11.05.2014, project is 1.7.2 package are com.ThreeSquadIndie.FermiumCraft.blocks.
  */
-public class BlockFermiumOre extends Block {
-	
-    public BlockFermiumOre(Material material){
+public class BlockFermiumBlock extends Block {
+
+    public BlockFermiumBlock(Material material) {
         super(material);
         setHardness(4.0F); // 33% harder than diamond
-        setBlockName("fermiumOre");
-        setHarvestLevel("pickaxe", 1);
+        setBlockName("fermiumBlock");
+        setHarvestLevel("pickaxe", 3);
         setCreativeTab(FermiumCraft.tabFermium);
-        setBlockTextureName(Reference.BlockFermiumOre);
+        setBlockTextureName(Reference.BlockFermiumBlock);
     }
 }

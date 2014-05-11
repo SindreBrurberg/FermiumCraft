@@ -1,6 +1,8 @@
 package com.ThreeSquadIndie.FermiumCraft.lib;
 
-import com.ThreeSquadIndie.FermiumCraft.Entity.EntityFermiumStar;
+import com.ThreeSquadIndie.FermiumCraft.entity.EntityFermiumStar;
+import com.ThreeSquadIndie.FermiumCraft.entity.TileEntityFabricator;
+import com.ThreeSquadIndie.FermiumCraft.worldGen.OreGen;
 import com.ThreeSquadIndie.FermiumCraft.blocks.ModBlocks;
 import com.ThreeSquadIndie.FermiumCraft.items.ModItems;
 import cpw.mods.fml.common.registry.EntityRegistry;
@@ -29,12 +31,18 @@ public class Registry {
         GameRegistry.registerItem(ModItems.itemFermiumCatalysisStar_Soft, "Soft Fermium Catalysis Star", Reference.MODID);
         //Blocks
         GameRegistry.registerBlock(ModBlocks.blockFermiumOre, "fermiumOre");
+        GameRegistry.registerBlock(ModBlocks.blockFabricator, "fabricator");
+        GameRegistry.registerBlock(ModBlocks.blockFermiumBlock, "fermiumBlock");
         //Entity
         EntityRegistry.registerModEntity(EntityFermiumStar.class, "FermiumStarHard", 10, Reference.MODID, 120, 3, true);
+        GameRegistry.registerTileEntity(TileEntityFabricator.class, "tileEntityFabricator");
+        //WorldGen
+        GameRegistry.registerWorldGenerator(new OreGen(), 0);
     }
 
     public static void recepieInit(){
         //Shaped
+        //Items
         GameRegistry.addRecipe(new ItemStack(ModItems.itemFermiumIngot), "XXX", "XXX", "XXX", 'X', new ItemStack(ModItems.itemFermiumNugget));
         GameRegistry.addRecipe(new ItemStack(ModItems.itemFermiumPickaxe), "XXX", " Y ", " Y ", 'X', new ItemStack(ModItems.itemFermiumIngot), 'Y', new ItemStack(Items.stick));
         GameRegistry.addRecipe(new ItemStack(ModItems.itemFermiumHoe), " XX", " Y ", " Y ", 'X', new ItemStack(ModItems.itemFermiumIngot), 'Y', new ItemStack(Items.stick));
@@ -43,9 +51,12 @@ public class Registry {
         GameRegistry.addRecipe(new ItemStack(ModItems.itemFermiumAxe), "XX ", "XY ", " Y ", 'X', new ItemStack(ModItems.itemFermiumIngot), 'Y', new ItemStack(Items.stick));
         GameRegistry.addRecipe(new ItemStack(ModItems.itemFermiumStar_Soft), "AXB", "ZYZ", "CXD", 'X', new ItemStack(Items.slime_ball), 'Y', new ItemStack(Blocks.end_stone), 'Z', new ItemStack(ModItems.itemFermiumIngot), 'A', new ItemStack(Items.ender_pearl), 'B', new ItemStack(Items.diamond), 'C', new ItemStack(Items.golden_apple), 'D', new ItemStack(Items.ender_eye));
         GameRegistry.addRecipe(new ItemStack(ModItems.itemFermiumCatalysisStar_Soft), "YXY", "XZX", "YXY", 'X', new ItemStack(ModItems.itemFermiumStar_Soft), 'Y', new ItemStack(Items.slime_ball), 'Z', new ItemStack(ModItems.itemFermiumIngot));
+        //Blocks
+        GameRegistry.addRecipe(new ItemStack(ModBlocks.blockFermiumBlock), "XXX", "XXX", "XXX", 'X', new ItemStack(ModItems.itemFermiumIngot));
 
         //Shapeless
         GameRegistry.addShapelessRecipe(new ItemStack(ModItems.itemFermiumNugget, 9), new ItemStack(ModItems.itemFermiumIngot));
+        GameRegistry.addShapelessRecipe(new ItemStack(ModItems.itemFermiumIngot, 9), new ItemStack(ModBlocks.blockFermiumBlock));
 
         //Smelting
         GameRegistry.addSmelting(ModBlocks.blockFermiumOre, new ItemStack(ModItems.itemFermiumIngot), 2F);

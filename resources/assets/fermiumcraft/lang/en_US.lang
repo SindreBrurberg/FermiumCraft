@@ -12,3 +12,6 @@ item.fermiumNugget.name=Fermium Nugget
 
 tile.fermiumOre.name=Fermium Ore
 tile.fermiumBlock.name=Fermium Block
+tile.fabricator.name=Fabricator
+
+itemGroup.tabFermium=Fermium Craft

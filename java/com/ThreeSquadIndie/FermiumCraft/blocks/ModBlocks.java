@@ -8,8 +8,12 @@ import net.minecraft.block.material.Material;
  */
 public class ModBlocks {
     public static Block blockFermiumOre;
+    public static Block blockFabricator;
+    public static Block blockFermiumBlock;
 
     public static void init(){
         blockFermiumOre = new BlockFermiumOre(Material.rock);
+        blockFabricator = new BlockFabricator(Material.rock);
+        blockFermiumBlock = new BlockFermiumBlock(Material.rock);
     }
 }

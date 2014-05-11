@@ -1,4 +1,4 @@
-package com.ThreeSquadIndie.FermiumCraft.WorldGen;
+package com.ThreeSquadIndie.FermiumCraft.worldGen;
 
 import com.ThreeSquadIndie.FermiumCraft.blocks.ModBlocks;
 import cpw.mods.fml.common.IWorldGenerator;
