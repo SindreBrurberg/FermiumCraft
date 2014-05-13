@@ -26,6 +26,42 @@ public class EntityFermiumStar extends EntityThrowable {
         super(par1World, par2, par4, par6);
     }
 
+    private void flat(int math){
+        this.worldObj.createExplosion(this, this.posX, this.posY, this.posZ - math, (float)5, true);
+        this.worldObj.createExplosion(this, this.posX, this.posY, this.posZ + math, (float)5, true);
+        this.worldObj.createExplosion(this, this.posX - math, this.posY, this.posZ, (float)5, true);
+        this.worldObj.createExplosion(this, this.posX + math, this.posY, this.posZ, (float)5, true);
+        this.worldObj.createExplosion(this, this.posX - math, this.posY, this.posZ - math, (float)5, true);
+        this.worldObj.createExplosion(this, this.posX + math, this.posY, this.posZ + math, (float)5, true);
+        this.worldObj.createExplosion(this, this.posX - math, this.posY, this.posZ + math, (float)5, true);
+        this.worldObj.createExplosion(this, this.posX + math, this.posY, this.posZ - math, (float)5, true);
+    }
+
+    private void up(int math){
+        this.worldObj.createExplosion(this, this.posX, this.posY + math, this.posZ, (float)5, true);
+        this.worldObj.createExplosion(this, this.posX, this.posY + math, this.posZ + math, (float)5, true);
+        this.worldObj.createExplosion(this, this.posX + math, this.posY + math, this.posZ, (float)5, true);
+        this.worldObj.createExplosion(this, this.posX, this.posY + math, this.posZ - math, (float)5, true);
+        this.worldObj.createExplosion(this, this.posX - math, this.posY + math, this.posZ, (float)5, true);
+        this.worldObj.createExplosion(this, this.posX + math, this.posY + math, this.posZ + math, (float)5, true);
+        this.worldObj.createExplosion(this, this.posX + math, this.posY + math, this.posZ - math, (float)5, true);
+        this.worldObj.createExplosion(this, this.posX - math, this.posY + math, this.posZ + math, (float)5, true);
+        this.worldObj.createExplosion(this, this.posX - math, this.posY + math, this.posZ - math, (float)5, true);
+    }
+
+    private void down(int math){
+        this.worldObj.createExplosion(this, this.posX, this.posY - math, this.posZ, (float)5, true);
+        this.worldObj.createExplosion(this, this.posX, this.posY - math, this.posZ - math, (float)5, true);
+        this.worldObj.createExplosion(this, this.posX - math, this.posY - math, this.posZ, (float)5, true);
+        this.worldObj.createExplosion(this, this.posX, this.posY - math, this.posZ + math, (float)5, true);
+        this.worldObj.createExplosion(this, this.posX + math, this.posY - math, this.posZ, (float)5, true);
+        this.worldObj.createExplosion(this, this.posX - math, this.posY - math, this.posZ - math, (float)5, true);
+        this.worldObj.createExplosion(this, this.posX - math, this.posY - math, this.posZ + math, (float)5, true);
+        this.worldObj.createExplosion(this, this.posX + math, this.posY - math, this.posZ - math, (float)5, true);
+        this.worldObj.createExplosion(this, this.posX + math, this.posY - math, this.posZ + math, (float)5, true);
+    }
+
+
     /**
      * Called when this EntityThrowable hits a block or entity.
      */
@@ -39,19 +75,29 @@ public class EntityFermiumStar extends EntityThrowable {
             {
                 b0 = 1;
             }
-
             par1MovingObjectPosition.entityHit.attackEntityFrom(DamageSource.causeThrownDamage(this, this.getThrower()), (float)b0);
         }
         int num = 0;
+        int var = 5;
         if (!this.worldObj.isRemote)
         {
-            for (int i = 0; i < 100; ++i)
+            for (int i = 0; i < 1000; ++i)
             {
-                if (num == 5){
-                    this.worldObj.createExplosion(this, this.posX, this.posY - 1, this.posZ, (float)5, true);
+                int math = i / var;
+                if (i == 0){
+                    this.worldObj.createExplosion(this, this.posX, this.posY, this.posZ, (float)5, true);
+                }
+                if (num == var - 4){
+                    up(math);
+                }
+                else if (num == var - 2){
+                    flat(math);
+                }
+                else if (num == var){
+                    down(math);
                     num = 0;
                 }
-                if (i == 99){
+                if (i == 999){
 
                     this.worldObj.newExplosion(this, this.posX, this.posY, this.posZ, (float)5, true, true);
                 }
