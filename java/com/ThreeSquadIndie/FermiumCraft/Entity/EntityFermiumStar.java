@@ -165,7 +165,7 @@ public class EntityFermiumStar extends EntityThrowable {
         }
         int num = 0;
         int length = 100000;
-        int var = length / 100;
+        int var = length / 25;
         if (!this.worldObj.isRemote) {
             this.worldObj.getGameRules().setOrCreateGameRule("doTileDrops", "false");
             this.worldObj.createExplosion(this, this.posX, this.posY, this.posZ, (float)5, true);
